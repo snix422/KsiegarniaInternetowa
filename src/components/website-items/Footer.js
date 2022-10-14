@@ -1,4 +1,5 @@
-import Newsletter from "./Newsletter"
+import Newsletter from "./Newsletter";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -7,24 +8,25 @@ const Footer = () => {
             <div className="footer-links">
                 <div className="footer-links-urbookstore">
                     <span>UrBookStore</span>
-                    <a href="#">O nas</a>
-                    <a href="#">Kontakt</a>
-                    <a href="#">Załóż konto</a>
-                    <a href="#">Polityka prywatności</a>
+                    <Link className="link" to="/onas">O nas</Link>
+                    <Link className="link" to="/kontakt">Kontakt</Link>
+                    <Link className="link" to="/rejestracja">Załóż konto</Link>
+                    <Link className="link" to="/">Polityka prywatności</Link>
                 </div>
                 <div className="footer-links-zakupy">
                     <span>Zakupy</span>
-                    <a href="#">Bestsellery</a>
-                    <a href="#">Zapowiedzi</a>
-                    <a href="#">Promocje</a>
-                    <a href="#">Regulamin</a>
+                    <Link className="link" to="/bestsellers">Bestsellery</Link>
+                    <Link className="link" to="/zapowiedzi">Zapowiedzi</Link>
+                    <Link className="link" to="/promocje">Promocje</Link>
+                    <Link className="link" to="/nowosci">Nowości</Link>
+                    <Link className="link" to="/onas">Regulamin</Link>
                 </div>
                 <div className="footer-links-oferta">
                     <span>Oferta</span>
-                    <a href="#">Książki</a>
-                    <a href="#">Audiobooki</a>
-                    <a href="#">Muzyka</a>
-                    <a href="#">Filmy</a>
+                    <Link className="link" to="/onas">Książki</Link>
+                    <Link className="link" to="/onas">Audiobooki</Link>
+                    <Link className="link" to="/onas">Muzyka</Link>
+                    <Link className="link" to="/onas">Filmy</Link>
                 </div>
                 <div className="footer-links-topbooks">
                     <span>Top 5 książek</span>

@@ -6,11 +6,16 @@ import logoImg2 from "../../images/logo2.png";
 import upArrowImg from "../../images/uparrow.png";
 import downArrowImg from '../../images/downarrow.png';
 import { useState } from "react";
+import {Link} from 'react-router-dom';
 
 const NavBar = (props) => {
     const [showCategories, setShowCategories] = useState('book-categories-none');
     const [downArrow, setDownArrow] = useState('downarrow-block');
     const [upArrow, setUpArrow] = useState('uparrow-none');
+    const [dropdown, setDropdown] = useState('none');
+    const [dropdownProfile, setDropdownProfile] = useState('dropdown-profile-none')
+    
+    
     const show = () => {
         setShowCategories('book-categories-block');
         setDownArrow('downarrow-none');
@@ -23,15 +28,38 @@ const NavBar = (props) => {
         setUpArrow('uparrow-none');
     }
 
+    const showDropdown = () => {
+        if(dropdown === "none")
+        {
+            setDropdown("block")
+            setUpArrow('uparrow-block');
+            setDownArrow('downarrow-none');
+        }
+        else {
+            setDropdown("none");
+            setDownArrow('downarrow-block');
+            setUpArrow('uparrow-none');
+        }
+    }
+
+    const showDropdownProfile = () => {
+        if(dropdownProfile === "dropdown-profile-none")
+        {
+            setDropdownProfile('dropdown-profile-block');
+        }
+        else {
+            setDropdownProfile('dropdown-profile-none')
+        }
+    }
 
 
-    props.class(showCategories);
+    /*props.class(showCategories);*/
 
     return (
         <div className="navbar">
             <div className="navbar-main">
                 <div className="navbar-logo">
-                    <img src={logoImg2}></img>
+                    <Link to="/"><img src={logoImg2}></img></Link>
                 </div>
                 <div className="navbar-search">
                 <input type="text" placeholder="Czego szukasz?"></input>
@@ -39,18 +67,33 @@ const NavBar = (props) => {
                 </div>
                 <div className="navbar-profile">
                 <div className="profile">
-                    <img src={profileImg}></img>
-                    <h3>Profil</h3>
+                    <Link className="profile-link" to="/zaloguj"> 
+                    <img  className="img-profile" src={profileImg}></img>
+                    <span>Profil</span>
+                    </Link>
+                  
                 </div>
                 <div className="koszyk">
                     <img src={koszykImg}></img>
                     <h3>Koszyk</h3>
+                    <ul className={dropdownProfile}>
+                        <li>
+                            <button>Zaloguj się</button>
+                        </li>
+                    </ul>
                 </div>
                 </div>
             </div>
             <div className="links">
-                <a className="boooks" href="#">Książki</a><img className={upArrow} src={upArrowImg} onClick={collapse}></img><img className={downArrow} src={downArrowImg} onClick={show}></img>
-                <a href="#">Nowości</a>
+                <a className="boooks" href="#" onClick={showDropdown}>Książki</a><div className="arrow"><img className={upArrow} src={upArrowImg} onClick={collapse}></img><img className={downArrow} src={downArrowImg} onClick={show}></img> </div>
+                    <ul className={dropdown}>
+                    <li><a href="#">Literatura</a></li>
+                    <li><a href="#">Literatura</a></li>
+                    <li><a href="#">Literatura</a></li>
+                    <li><a href="#">Literatura</a></li>
+                    </ul>
+                
+                <a className="link-nowosci" href="#">Nowości</a>
                 <a href="#">Zapowiedzi</a>
                 <a href="#">Promocje</a>
             </div>

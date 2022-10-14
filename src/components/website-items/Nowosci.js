@@ -1,7 +1,12 @@
-const Bestsellers = () => {
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+
+const Nowosci = () => {
     return (
+        <>
+        <NavBar />
         <div className="bestsellers">
-            <span>Bestsellery</span>
+            <span>Nowosci</span>
         <div className="bestsellers-books">
         <div className="book">
             <div className="book-image"></div>
@@ -104,10 +109,9 @@ const Bestsellers = () => {
         </div>
         </div>
     </div>
-    
-)
-}   
-    
+        <Footer />
+        </>
+    )
+}
 
-
-export default Bestsellers
+export default Nowosci

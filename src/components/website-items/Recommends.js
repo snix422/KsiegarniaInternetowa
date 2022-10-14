@@ -9,15 +9,7 @@ const Recommends = (props) => {
 
     return (
         <div className="recommends">
-            <div className={props.class}>
-                <a href="#">Literatura</a>
-                <a href="#">Kryminał,Thriller,Sensacja</a>
-                <a href="#">Dla dzieci</a>
-                <a href="#">Nauka i Biznes</a>
-                <a href="#">Filozofia</a>
-                <a href="#">Kuchnia</a>
-                <a href="#">Moda i Uroda</a>
-        </div>
+          
             <div className="book">
                 <div className="book-image"></div>
                 <div className="book-info">

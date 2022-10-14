@@ -1,12 +1,17 @@
-const Bestsellers = () => {
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+
+const Promocje = () => {
     return (
+        <>
+        <NavBar />
         <div className="bestsellers">
-            <span>Bestsellery</span>
+            <span>Promocje</span>
         <div className="bestsellers-books">
         <div className="book">
             <div className="book-image"></div>
             <div className="book-info">
-                <button>Bestsellery</button>
+                <button>Promocje</button>
                 <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
                 <span className="book-author">Martina Winkelhofer</span>
                 <h4 className="book-price">56,99zł</h4>
@@ -104,10 +109,10 @@ const Bestsellers = () => {
         </div>
         </div>
     </div>
-    
-)
-}   
-    
+        <Footer />
+        </>
+    )
 
+}
 
-export default Bestsellers
+export default Promocje

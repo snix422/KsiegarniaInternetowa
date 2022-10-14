@@ -107,17 +107,89 @@
     flex-direction: column;
     width: 60px;
     height: 70px;
+    text-decoration: none;
+    margin-top: -15px;
 }
 
-.profile h3 {
+.profile span {
     text-align: center;
     transition: all 0.1s;
     margin-top: -2px;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: -3px;
+    font-size: 20px;
 }
 
-.profile h3:hover {
+.profile-link {
+    text-decoration: none;
+}
+
+.img-profile {
+    width: 60px;
+    height: 70px;
+}
+
+.profile span:hover {
     color: red;
+}
+
+.dropdown-profile-none {
+    height: 100px;
+    border: 2px solid black;
+    list-style: none;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: 5;
+    background-color: #525151;
+    margin-left: -200px;
+    margin-top: -10px;
+    display: none;
+}
+
+.dropdown-profile-block {
+    height: 100px;
+    border: 2px solid black;
+    list-style: none;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: 5;
+    background-color: #525151;
+    margin-left: -200px;
+    margin-top: -10px;
+    display: none;
+}
+
+.dropdown-profile-block li {
+    margin-left: -40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-profile-block li button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    height: 50px;
+    width: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .koszyk {
@@ -130,7 +202,7 @@
 .koszyk h3 {
     text-align: center;
     transition: all 0.1s;
-    margin-top: -1px;
+    margin-top: 7px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -153,43 +225,69 @@
     border-bottom: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+    display: flex;
+    height: 30px;
 }
 
 .links a:hover {
     color: red;
-    border-bottom: 2px solid red;
+    border-bottom: 4px solid red;
 }
 
 .links .uparrow-none {
-    position: absolute;
-    left: 41.5%;
-    bottom: 0%;
     width: 40px;
     display: none;
 }
 
 .links .uparrow-block {
-    position: absolute;
-    left: 41.5%;
-    bottom: 0%;
     width: 40px;
     display: block;
 }
 
 .links .downarrow-none {
-    position: absolute;
-    left: 41.5%;
-    bottom: 0%;
     width: 40px;
     display: none;
 }
 
 .links .downarrow-block {
-    position: absolute;
-    left: 41.5%;
-    bottom: 0%;
     width: 40px;
     display: block;
+}
+
+.links .none {
+    border: 2px solid black;
+    z-index: 6;
+    list-style: none;
+    margin-left: -190px;
+    margin-top: 40px;
+    display: none;
+}
+
+.links .block {
+    border-radius: 10px;
+    z-index: 6;
+    list-style: none;
+    margin-left: -190px;
+    margin-top: 40px;
+    display: block;
+    width: 100px;
+    background-color: #a5a75c;
+}
+
+.links .block li {
+    margin-left: -40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.links .block li a {
+    color: white;
+}
+
+.arrow {
+    margin-left: -50px;
+    margin-top: -5px;
 }
 
 .home-content h3 {
@@ -197,6 +295,11 @@
     font-family: 'Montserrat', sans-serif;
     padding-top: 50px;
     padding-left: 320px;
+}
+
+.home-content hr {
+    width: 80%;
+    text-align: center;
 }
 
 .recommends {
@@ -344,9 +447,23 @@
     padding-right: 280px;
     padding-bottom: 20px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 40px;
+    align-items: center;
+}
+
+.bestsellers span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.bestsellers-books {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 }
 
 .bestsellers .book {
@@ -520,12 +637,13 @@
     gap: 10px;
 }
 
-.footer-links-urbookstore a {
+.footer-links-urbookstore a,
+.footer-links-urbookstore Link {
     text-decoration: none;
     color: white;
 }
 
-.footer-links-urbookstore a:hover {
+.footer-links-urbookstore Link:hover {
     color: red;
 }
 
@@ -543,13 +661,14 @@
     gap: 10px;
 }
 
-.footer-links-zakupy a {
+.footer-links-zakupy a,
+.footer-links-zakupy Link {
     text-decoration: none;
     color: white;
     transition: 0.1s all;
 }
 
-.footer-links-zakupy a:hover {
+.footer-links-zakupy Link:hover {
     color: red;
 }
 
@@ -567,12 +686,17 @@
     gap: 10px;
 }
 
-.footer-links-oferta a {
+.footer-links-oferta a,
+.footer-links-oferta Link {
     text-decoration: none;
     color: white;
 }
 
-.footer-links-oferta a:hover {
+.footer-links-oferta Link:hover {
+    color: red;
+}
+
+.link:hover {
     color: red;
 }
 
@@ -608,4 +732,199 @@
 
 .footer-copywright {
     margin-top: 100px;
+}
+
+.kontakt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.kontakt p {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.kontakt h2 {
+    font-size: 50px;
+}
+
+.kontakt img {
+    height: 100px;
+    width: 150px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-bottom: 20px;
+}
+
+.contact-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-phone .phone {
+    height: 100px;
+    width: 100px;
+}
+
+.onas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.onas h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.onas p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.zaloguj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.zaloguj .text-zaloguj {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.zaloguj .label-zaloguj {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.zaloguj .input-zaloguj {
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid red;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 300px;
+    font-weight: bold;
+}
+
+.zaloguj .input-zaloguj:focus {
+    outline: none;
+}
+
+.zaloguj .input-zaloguj::placeholder {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.zaloguj .button-zaloguj {
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: red;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.zaloguj .info-register {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.zaloguj .button-register {
+    text-decoration: none;
+    border: 2px solid gray;
+    padding: 5px 5px 5px 5px;
+    border-radius: 15px;
+    color: black;
+    margin-top: 15px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    width: 150px;
+    font-weight: bold;
+}
+
+.zaloguj .button-register:hover {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register .text-register {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.register .label-register {
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.register .input-register {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid red;
+    width: 300px;
+}
+
+.register .input-register:focus {
+    outline: none;
+}
+
+.register .button-register {
+    border: none;
+    width: 200px;
+    height: 60px;
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 60px;
+    margin-top: 40px;
 }
