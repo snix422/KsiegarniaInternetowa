@@ -1,5 +1,6 @@
 import Recommends from "./Recommends"
 import Bestsellers from "./Bestsellers"
+import Koszyk from "./Koszyk"
 
 const HomePage = (props) => {
     return(
@@ -7,6 +8,7 @@ const HomePage = (props) => {
         <Recommends class={props.class} />
         <hr></hr>
         <Bestsellers />
+        <Koszyk />
     </div>
     )
 
