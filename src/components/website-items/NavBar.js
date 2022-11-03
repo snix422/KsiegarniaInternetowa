@@ -56,9 +56,10 @@ const NavBar = (props) => {
     /*props.class(showCategories);*/
 
     return (
-        <div className="navbar navbar navbar-default">
-            <div className="navbar-main container">
-                <div className="navbar-logo navbar-brand">
+        <div className="navbar">
+            <div className="navbar-main ">
+                <div className="navbar-main-objects">
+                <div className="navbar-logo ">
                     <Link to="/"><img src={logoImg2}></img></Link>
                 </div>
                 <div className="navbar-search">
@@ -78,20 +79,18 @@ const NavBar = (props) => {
                     <span>Koszyk</span>
                 </div>
                 </div>
-            </div>
+                </div>
+
             <div className="links">
-                <Link to="/books" className="books" href="#" onClick={showDropdown}>Książki</Link><div className="arrow"><img className={upArrow} src={upArrowImg} onClick={collapse}></img><img className={downArrow} src={downArrowImg} onClick={show}></img> </div>
-                    <ul className={dropdown}>
-                    <li><a href="#">Literatura</a></li>
-                    <li><a href="#">Literatura</a></li>
-                    <li><a href="#">Literatura</a></li>
-                    <li><a href="#">Literatura</a></li>
-                    </ul>
-                
-                <Link to="/nowosci" className="link-nowosci">Nowości</Link>
-                <Link to="/zapowiedzi">Zapowiedzi</Link>
-                <Link to="/promocje">Promocje</Link>
+                <Link to="/books" className="link">Książki</Link>
+                <Link to="/nowosci" className="link">Nowości</Link>
+                <Link to="/zapowiedzi" className="link">Zapowiedzi</Link>
+                <Link to="/promocje" className="link">Promocje</Link>
             </div>
+            </div>
+           
+           
+            
         </div>
     )
 }
