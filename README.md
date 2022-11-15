@@ -35,7 +35,7 @@ Użytkownicy będą mogli:
 &nbsp;
 # 2. Dokumentacja techniczna
 ## Diagram bazy danych
-![baza_danych.png](src_readme/bazaDanych.png)
+![baza_danych.png](src_readme/bazaDanych.jpg)
 Zalogowany użytkownik dokonuje zamówienia. Może on dokonać większej liczby zamówień, jednak jedno zamówienie jest przypisane dokładnie do jednego użytkownika. To samo dotyczy książki występującej w kilku zamówieniach jednak każde zamówienie jest przypisane do jednej książki. Podobnie jest z autorami: jeden autor może posiadać kilka książek jednak jedna książka posiada dokładnie jednego autora.
 Skróty:
 PK - oznacza klucz główny tabeli, czyli atrybut jednoznacznie określający każde wystąpienie danej encji.
