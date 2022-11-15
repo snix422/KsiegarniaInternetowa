@@ -6,9 +6,9 @@
 
 ## Spis treści
 1. [Specyfikacja wymagań systemowych](#1specyfikacja-wymagań-systemowych)
-    1. [Cel systemu](#cel_systemu)&nbsp;
-    2. [Wymagania funkcjonalne](#wymagania_funkcjonalne)&nbsp;
-    3. [Wymagania niefunkcjonalne](#wymagania_niefunkcjonalne)&nbsp;
+    1.1. [Cel systemu](#cel_systemu),
+    1.2. [Wymagania funkcjonalne](#wymagania_funkcjonalne),
+    1.3. [Wymagania niefunkcjonalne](#wymagania_niefunkcjonalne),
 2. [Dokumentacja techniczna](#2dokumentacja_techniczna)
 3. [Dokumentacja użytkownika](#3dokumentacja_uzytkownika)
 
