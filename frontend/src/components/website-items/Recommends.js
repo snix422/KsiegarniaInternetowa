@@ -1,118 +1,17 @@
 import { useState } from "react";
+import DisplayBook from "./DisplayBook";
 
 const Recommends = (props) => {
+  const [showCategories, setShowCategories] = useState("book-categories-none");
+  const showBooks = () => {
+    setShowCategories("book-categories-block");
+  };
 
-    const [showCategories, setShowCategories] = useState('book-categories-none');
-    const showBooks = () => {
-        setShowCategories('book-categories-block')
-    }
+  return (
+    <div className="recommends">
+      <DisplayBook />
+    </div>
+  );
+};
 
-    return (
-        <div className="recommends">
-          
-            <div className="book">
-                <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            <div className="book">
-            <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            <div className="book">
-            <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            <div className="book">
-            <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            <div className="book">
-            <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            <div className="book">
-            <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            <div className="book">
-            <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            <div className="book">
-            <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            <div className="book">
-            <div className="book-image"></div>
-                <div className="book-info">
-                    <button>Polecane</button>
-                    <span className="book-title">Cesarzowa. Pierwsze lata Sisi na wiedeńskim dworze</span>
-                    <span className="book-author">Martina Winkelhofer</span>
-                    <h4 className="book-price">56,99zł</h4>
-                    <button className="addtobuy">Do koszyka</button>
-                    
-                </div>
-            </div>
-            
-        </div>
-        
-    )
-}
-
-export default Recommends
+export default Recommends;

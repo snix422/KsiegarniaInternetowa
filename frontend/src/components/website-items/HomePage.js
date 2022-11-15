@@ -1,19 +1,14 @@
-import Recommends from "./Recommends"
-import Bestsellers from "./Bestsellers"
-import Koszyk from "./Koszyk"
-
+import Recommends from "./Recommends";
+import Bestsellers from "./Bestsellers";
 
 const HomePage = (props) => {
-    return(
+  return (
     <div className="home-content">
-        <Recommends class={props.class} />
-        <hr></hr>
-        <Bestsellers />
-
+      <Recommends class={props.class} />
+      <hr></hr>
+      <Bestsellers />
     </div>
-    )
+  );
+};
 
-}
-
-
-export default HomePage
+export default HomePage;

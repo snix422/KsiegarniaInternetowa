@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Bestsellers = () => {
-    return (
-        <div className="bestsellers">
-            <span>Bestsellery</span>
+  return (
+    <div className="bestsellers">
+      {/* <span>Bestsellery</span>
         <div className="bestsellers-books">
         <Link to="/book" className="book">
             <div className="book-image"></div>
@@ -104,12 +104,9 @@ const Bestsellers = () => {
                 
             </div>
         </div>
-        </div>
+        </div> */}
     </div>
-    
-)
-}   
-    
+  );
+};
 
-
-export default Bestsellers
+export default Bestsellers;
