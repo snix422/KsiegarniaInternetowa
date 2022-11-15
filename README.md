@@ -21,8 +21,8 @@
 Celem internetowej księgarni jest umożliwienie klientom dokonania zakupu książek bez konieczności wychodzenia z domu. Użytkownik zarejestrowany może przeglądać produkty jakie znajdują się na stronie, wszyscy użytkownicy mogą wyszukiwać produkty według kategorii. Natomiast po zarejestrowaniu i zalogowaniu jest w stanie dokonać zamówienia danego produktu. Dodatkowo każdy klient, który posiada konto na stronie ma możliwość wystawienia recenzji jak i oceny danemu produktowi. Strona księgarni dzięki swojej responsywności jest dostępna nie tylko na komputery stacjonarne ale również urządzenia mobilne.
 ## Wymagania funkcjonalne
 Zalogowani użytkownicy będą mogli:
-- dokonywać zamówień książek
-- wystawiać ocenę każdej książce.
+- zamowić książki
+- wystawić ocenę każdej książce.
 
 Natomiast niezalogowani użytkownicy będą mogli:
 - przeglądać produkty
