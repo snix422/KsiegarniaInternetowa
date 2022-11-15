@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 require_once('connectionDb.php');
 function input_data($data)
 {
@@ -28,13 +30,14 @@ function checkExistsLoginAndEmail($login, $email, $pass){
                 }
                 else{
                     if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email) VALUES (?, ?, ?)')) {
-                        //$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                        $stmt->bind_param('sss',$login, $pass, $email);
+                        $password = password_hash($pass, PASSWORD_DEFAULT);
+                        $stmt->bind_param('sss',$login, $password, $email);
                         $stmt->execute();
-                        echo 'Hurra! Zosałeś/aś pomyślnie zalogowany/a. Możesz się teraz zalogowac do swojego konta';
+                        echo 'Hurra! Zosałeś/aś pomyślnie zarejestrowany/a. Możesz się teraz zalogowac do swojego konta';
+                        header("Location: login.html");
                     }
                     else {
-                        throw new Exception('Drugie: Upps! Coś poszło nie tak. Przepraszamy');
+                        throw new Exception('Coś poszło nie tak. Przepraszamy');
                     }
                 }
             }
@@ -43,7 +46,7 @@ function checkExistsLoginAndEmail($login, $email, $pass){
         $stmt->close();
     }
     else {
-        throw new Exception('Upps! Coś poszło nie tak. Przepraszamy');
+        throw new Exception('Coś poszło nie tak. Przepraszamy');
     }
     CloseConn($conn);
 }
