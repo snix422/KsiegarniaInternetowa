@@ -4,11 +4,11 @@
 
 </div>
 
-## Spis treści
+# Spis treści
 1. [Specyfikacja wymagań systemowych](#1specyfikacja-wymagań-systemowych)
-    1.1. [Cel systemu](#cel_systemu)&nbsp;
-    1.2. [Wymagania funkcjonalne](#wymagania_funkcjonalne)&nbsp;
-    1.3. [Wymagania niefunkcjonalne](#wymagania_niefunkcjonalne)&nbsp;
+    ## 1.1. [Cel systemu](#cel_systemu)&nbsp;
+    ## 1.2. [Wymagania funkcjonalne](#wymagania_funkcjonalne)&nbsp;
+    ## 1.3. [Wymagania niefunkcjonalne](#wymagania_niefunkcjonalne)&nbsp;
 2. [Dokumentacja techniczna](#2dokumentacja_techniczna)
 3. [Dokumentacja użytkownika](#3dokumentacja_uzytkownika)
 
@@ -23,7 +23,7 @@ Celem internetowej księgarni jest umożliwienie klientom dokonania zakupu ksią
 Zalogowani użytkownicy będą mogli:
 - dokonywać zamówień książek
 - wystawiać ocenę każdej książce.
-###
+
 Natomiast niezalogowani użytkownicy będą mogli:
 - przeglądać produkty
 - wybierać tytuły z danej kategorii.
