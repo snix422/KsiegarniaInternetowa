@@ -57,8 +57,9 @@ const NavBar = (props) => {
 
     return (
         <div className="navbar">
-            <div className="navbar-main">
-                <div className="navbar-logo">
+            <div className="navbar-main ">
+                <div className="navbar-main-objects">
+                <div className="navbar-logo ">
                     <Link to="/"><img src={logoImg2}></img></Link>
                 </div>
                 <div className="navbar-search">
@@ -73,30 +74,23 @@ const NavBar = (props) => {
                     </Link>
                   
                 </div>
-                <div className="koszyk">
+                <div className="koszyk1">
                     <img src={koszykImg}></img>
-                    <h3>Koszyk</h3>
-                    <ul className={dropdownProfile}>
-                        <li>
-                            <button>Zaloguj się</button>
-                        </li>
-                    </ul>
+                    <span>Koszyk</span>
                 </div>
                 </div>
-            </div>
+                </div>
+
             <div className="links">
-                <a className="boooks" href="#" onClick={showDropdown}>Książki</a><div className="arrow"><img className={upArrow} src={upArrowImg} onClick={collapse}></img><img className={downArrow} src={downArrowImg} onClick={show}></img> </div>
-                    <ul className={dropdown}>
-                    <li><a href="#">Literatura</a></li>
-                    <li><a href="#">Literatura</a></li>
-                    <li><a href="#">Literatura</a></li>
-                    <li><a href="#">Literatura</a></li>
-                    </ul>
-                
-                <a className="link-nowosci" href="#">Nowości</a>
-                <a href="#">Zapowiedzi</a>
-                <a href="#">Promocje</a>
+                <Link to="/books" className="link">Książki</Link>
+                <Link to="/nowosci" className="link">Nowości</Link>
+                <Link to="/zapowiedzi" className="link">Zapowiedzi</Link>
+                <Link to="/promocje" className="link">Promocje</Link>
             </div>
+            </div>
+           
+           
+            
         </div>
     )
 }
