@@ -13,6 +13,10 @@ import BooksPage from './components/website-items/BooksPage';
 import ScrollToTop from './components/ScrollToTop';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { isCompositeComponentWithType } from 'react-dom/test-utils';
+import Profile from './components/website-items/Profile';
+import ProfileAdmin from './components/website-items/ProfileAdmin';
+import Koszyk from './components/website-items/Koszyk';
+import AfterBuy from './components/website-items/AfterBuy';
 
 function App() {
     return ( 
@@ -31,6 +35,10 @@ function App() {
               <Route exact path="/nowosci" element={<Nowosci />}></Route>
               <Route exact path="/book" element={<BookPage />}></Route>
               <Route exact path="/books" element={<BooksPage />}></Route>
+              <Route exact path="/profile" element={<Profile />}></Route>
+              <Route exact path="/profileAdmin" element={<ProfileAdmin />}></Route>
+              <Route exact path="/koszyk" element={<Koszyk />}></Route>
+              <Route exact path="/transakcja" element={<AfterBuy />}></Route>
               
           </Routes>
         </BrowserRouter>

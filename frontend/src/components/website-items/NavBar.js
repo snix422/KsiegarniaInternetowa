@@ -75,8 +75,10 @@ const NavBar = (props) => {
                   
                 </div>
                 <div className="koszyk1">
-                    <img src={koszykImg}></img>
+                    <Link className="profile-link" to="/koszyk">
+                    <img className="img-profile" src={koszykImg}></img>
                     <span>Koszyk</span>
+                    </Link>
                 </div>
                 </div>
                 </div>
