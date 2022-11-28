@@ -6,9 +6,6 @@ const HomePage = (props) => {
   return (
     <div className="home-content">
       <Recommends class={props.class} />
-      <BookPage />
-      
-      
     </div>
   );
 };
