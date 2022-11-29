@@ -1,0 +1,20 @@
+.onas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.onas h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.onas p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 50px;
+}

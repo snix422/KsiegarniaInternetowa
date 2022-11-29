@@ -12,7 +12,6 @@ import BookPage from './components/website-items/BookPage';
 import BooksPage from './components/website-items/BooksPage';
 import ScrollToTop from './components/ScrollToTop';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import { isCompositeComponentWithType } from 'react-dom/test-utils';
 import Profile from './components/website-items/Profile';
 import ProfileAdmin from './components/website-items/ProfileAdmin';
 

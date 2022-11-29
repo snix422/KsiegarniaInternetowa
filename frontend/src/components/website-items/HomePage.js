@@ -1,5 +1,5 @@
 import Recommends from "./Recommends";
-import Bestsellers from "./Bestsellers";
+import "../../css/HomePage.css";
 
 const HomePage = (props) => {
   return (

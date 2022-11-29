@@ -1,4 +1,5 @@
-import data from "../../data";
+import "../../css/Bestsellers.css";
+import "../../css/Book.css";
 
 const DisplayBook = (props) => {
 

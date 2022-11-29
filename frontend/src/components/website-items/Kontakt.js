@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import "../../css/Kontakt.css";
 import textImg from "../../images/text.webp";
 import phoneImg from "../../images/phone.png";
 

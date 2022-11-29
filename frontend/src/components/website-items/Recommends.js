@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DisplayBook from "./DisplayBook";
 import data from "../../data";
+import "../../css/Recommends.css";
 
 const Recommends = (props) => {
   const [showCategories, setShowCategories] = useState("book-categories-none");

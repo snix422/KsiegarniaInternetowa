@@ -1,0 +1,44 @@
+.kontakt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.kontakt p {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.kontakt h2 {
+    font-size: 50px;
+}
+
+.kontakt img {
+    height: 100px;
+    width: 150px;
+}
+.contacts {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-bottom: 20px;
+}
+
+.contact-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-phone .phone {
+    height: 100px;
+    width: 100px;
+}

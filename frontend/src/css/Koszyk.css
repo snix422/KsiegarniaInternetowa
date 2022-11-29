@@ -1,0 +1,61 @@
+.koszyk1 span:hover {
+    color: red;
+}
+
+
+.koszyk {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    flex-direction: column;
+}
+
+.koszyk span {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+
+.koszyk span:hover {
+    color: red;
+}
+.koszyk {
+    min-height: 30vh;
+}
+
+.koszyk span {
+    margin-left: 150px;
+    margin-top: 50px;
+    display: flex;
+    width: 200px;
+}
+
+/*-------Responsive-------*/
+@media screen and (max-width: 570px) {
+
+    .koszyk1 {
+        transform: translateY(-10px);
+    }
+    .koszyk1 img {
+        transform: translateY(5px);
+    }
+    .koszyk span {
+        font-size: 15px;
+    }
+    .profile span {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 520px) {
+
+    .koszyk {
+        margin-left: -15px;
+    }
+}
+/*--------------*/

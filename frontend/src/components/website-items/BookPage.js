@@ -1,6 +1,8 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { useState } from "react";
+import "../../css/Bestsellers.css";
+import "../../css/Book.css";
 
 const BookPage = () => {
 
