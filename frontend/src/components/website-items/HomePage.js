@@ -1,12 +1,11 @@
 import Recommends from "./Recommends";
-import "../../css/HomePage.css";
+import Bestsellers from "./Bestsellers";
+import BookPage from "./BookPage";
 
 const HomePage = (props) => {
   return (
     <div className="home-content">
       <Recommends class={props.class} />
-      
-      
     </div>
   );
 };

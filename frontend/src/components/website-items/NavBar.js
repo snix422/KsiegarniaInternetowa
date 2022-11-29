@@ -1,15 +1,12 @@
 import searchImg from "../../images/search.png";
 import profileImg from "../../images/profile.png";
 import koszykImg from "../../images/koszyk.png";
+import logoImg from "../../images/logo.jpg";
 import logoImg2 from "../../images/logo2.png";
+import upArrowImg from "../../images/uparrow.png";
+import downArrowImg from '../../images/downarrow.png';
 import { useState } from "react";
 import {Link} from 'react-router-dom';
-import "../../css/Links.css";
-import "../../css/Navbar.css";
-import "../../css/Koszyk.css";
-
-
-
 
 const NavBar = (props) => {
     const [showCategories, setShowCategories] = useState('book-categories-none');
@@ -78,8 +75,10 @@ const NavBar = (props) => {
                   
                 </div>
                 <div className="koszyk1">
-                    <img src={koszykImg}></img>
+                    <Link className="profile-link" to="/koszyk">
+                    <img className="img-profile" src={koszykImg}></img>
                     <span>Koszyk</span>
+                    </Link>
                 </div>
                 </div>
                 </div>

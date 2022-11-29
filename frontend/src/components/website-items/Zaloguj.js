@@ -2,6 +2,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import LoginForm from "./LoginForm";
 import { useNavigate } from "react-router-dom";
+import {Link } from "react-router-dom";
 import data from "../../data"
 import { useState, useEffect } from "react";
 

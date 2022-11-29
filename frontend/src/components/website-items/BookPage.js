@@ -1,13 +1,14 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { useState } from "react";
-import "../../css/Bestsellers.css";
-import "../../css/Book.css";
 
 const BookPage = () => {
 
     const [showBorderOpis, setShowBorderOpis] = useState('border-yes');
     const [showBorderOpinie, setShowBorderOpinie] = useState('border-none');
+    const [comments, setComments] = useState([]);
+    const [termComment, setTermComment] = useState('');
+    const [showInfoBook, setShowInfoBook] = useState(false);
 
     const clickOpis = () => {
         if(showBorderOpis === 'border-none'){
@@ -23,6 +24,22 @@ const BookPage = () => {
             setShowBorderOpinie('border-yes')
 
         }
+    }
+
+    const updateTermComment = (e) => {
+        setTermComment(e.target.value);
+    }
+
+    const AddComment = () => {
+        setComments([...comments, termComment]);
+        setTermComment('');
+    }
+
+    const markBook = () => {
+        setShowInfoBook(true);
+    }
+    const displayAlert = () => {
+        setShowInfoBook(false);
     }
 
     return(
@@ -52,6 +69,18 @@ const BookPage = () => {
                         <span>23,45zł</span>
                         <button>Do koszyka</button>
                 </div>
+                <div className="book-rating">
+                    <span>Oceń książkę</span>
+                    <select name="rating" id="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button className="btn btn-primary" onClick={markBook}>Oceń książkę</button>
+                    {showInfoBook === true ? <><div className="alert alert-success">Książka została oceniona</div><button className="btn btn-primary" onClick={displayAlert}>Ok</button></> : null}
+                </div>
             
             </div>
             <div className="book-opinie">
@@ -67,7 +96,18 @@ const BookPage = () => {
 
 Zuzanna zaczyna pracę na Poczcie Głównej i włącza się w podziemną walkę z okupantem. Zostaje przydzielona do komórki „P” zajmującej się przechwytywaniem anonimowych donosów pisanych przez Polaków do „Szanownego Pana Gestapo”. Jeden z listów rozdziera jej serce. Okazuje się, że działalność konspiracyjna to niebezpieczna gra, w której stawką jest nie tylko życie, ale i miłość.
 
-Listy do Gestapo to poruszająca do głębi spowiedź kobiety, która stanęła przed dramatycznymi wyborami. Opowieść o życiu brutalnie zmienionym przez wojnę. O ranach, które nigdy się nie goją, winach, które domagają się odkupienia, i przebaczeniu, które być może nie nadejdzie.</p> : <p>Opinie</p>}
+Listy do Gestapo to poruszająca do głębi spowiedź kobiety, która stanęła przed dramatycznymi wyborami. Opowieść o życiu brutalnie zmienionym przez wojnę. O ranach, które nigdy się nie goją, winach, które domagają się odkupienia, i przebaczeniu, które być może nie nadejdzie.</p> 
+        : <><p>Opinie</p> <textarea value={termComment} onChange={updateTermComment} className="form-control" placeholder="Wpisz swój komentarz"></textarea> <button className="btn btn-primary" onClick={AddComment}>Dodaj komentarz</button>
+        {comments.map((comment)=>{
+            return(
+                <div class="card bg-dark text-light">
+                    <div className="card-title">Nazwa użytkownika</div>
+                    <div class="card-body">
+                        {comment}
+                     </div>
+                </div>
+               )
+        })}</>}
             </div>
         </div>
         <Footer/>
