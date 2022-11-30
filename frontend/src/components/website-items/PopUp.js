@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "../../css/PopUp.css"
 
 const PopUp = () => {
     const [showPopUp, setShowPopUp] = useState("popup");

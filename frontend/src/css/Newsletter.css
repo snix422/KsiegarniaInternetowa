@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cormorant+SC:wght@500;700&family=Edu+VIC+WA+NT+Beginner:wght@500&family=Fira+Sans+Condensed:wght@300&family=Hind+Siliguri:wght@600;700&family=Indie+Flower&family=Montserrat:ital,wght@0,300;1,300;1,500&family=Noto+Sans+Mono&family=Nunito:ital,wght@1,500&family=Open+Sans:ital,wght@0,400;0,600;1,500&family=Quicksand:wght@300&family=Red+Hat+Display:ital@1&family=Roboto:ital@1&family=Saira:ital@1&family=Source+Code+Pro:ital,wght@1,500&family=Source+Sans+Pro:wght@600&family=Ubuntu:wght@500&display=swap');
+*
 .newsletter {
     width: 500px;
     height: 300px;
@@ -68,4 +70,30 @@
 
 .newsletter-info button {
     margin-top: -20px;
+}
+.invalid-feedback {
+    width: 10vw;
+    margin-left: -150px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.form-control::placeholder {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.form-control {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.form-control {
+    width: 20vw;
+    text-align: center;
+    margin-bottom: 10px;
 }

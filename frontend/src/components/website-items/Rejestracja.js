@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
-import Footer
- from "./Footer";
+import Footer from "./Footer";
+import "../../css/Rejestracja.css";
+
 const Rejestracja = () => {
     return (
         

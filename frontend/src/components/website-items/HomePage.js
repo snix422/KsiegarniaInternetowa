@@ -1,6 +1,5 @@
 import Recommends from "./Recommends";
-import Bestsellers from "./Bestsellers";
-import BookPage from "./BookPage";
+import "../../css/Home.css"
 
 const HomePage = (props) => {
   return (

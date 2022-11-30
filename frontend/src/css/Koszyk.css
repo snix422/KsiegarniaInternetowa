@@ -1,8 +1,3 @@
-.koszyk1 span:hover {
-    color: red;
-}
-
-
 .koszyk {
     display: flex;
     width: 50px;
@@ -21,12 +16,11 @@
     border: 2px solid black;
 }
 
-
 .koszyk span:hover {
     color: red;
 }
 .koszyk {
-    min-height: 30vh;
+    min-height: 100vh;
 }
 
 .koszyk span {
@@ -35,27 +29,42 @@
     display: flex;
     width: 200px;
 }
+.item-koszyk {
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
 
-/*-------Responsive-------*/
-@media screen and (max-width: 570px) {
+.item-koszyk span {
+    border: none;
+}
 
-    .koszyk1 {
-        transform: translateY(-10px);
-    }
-    .koszyk1 img {
-        transform: translateY(5px);
-    }
-    .koszyk span {
-        font-size: 15px;
-    }
-    .profile span {
-        font-size: 15px;
-    }
+.item-koszyk button {
+    transform: translateY(20px);
+}
+
+.koszyk-item button {
+    margin-right: 400px;
+    width: 100px;
+}
+
+.koszyk-item {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 @media screen and (max-width: 520px) {
-
     .koszyk {
         margin-left: -15px;
     }
 }
-/*--------------*/
