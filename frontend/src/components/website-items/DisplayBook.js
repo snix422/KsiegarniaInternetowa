@@ -1,32 +1,56 @@
 import data from "../../data";
 import KoszykContext from "../Context/KoszykContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import BookPage from "./BookPage";
+import InfoBook from "../Context/InfoBook";
 
 
 const DisplayBook = (props) => {
 
+  const [show, setShow] = useState(false);
+
   console.log(props.title)
 
-  const Context = useContext(KoszykContext);
+  const InfoB = useContext(InfoBook);
 
+  const Context = useContext(KoszykContext);
+  const [sumPrice, setSumPrice] = useState(0);
  const addToKoszyk = () => {
   Context.item.push({title:props.title,
-                    price: props.price})
+                    price: props.price});
+    
+  Context.sum += props.price;
+
  }
 
  console.log(Context);
+
+ const click = () => {
+  console.log('click');
+  setShow(true);
+  InfoB.title = props.title;
+  InfoB.author = props.author;
+  InfoB.image = props.image;
+  InfoB.price = props.price;
+  InfoB.rating = props.rating;
+
+  console.log(InfoB);
+ 
+ }
+ 
+
   
   
   return (
 
    
     
-    <Link to="/book">
-    <div className="book">
+    
+    <div onClick={click} className="book">
    
     <div>
-        <img className="book-image"  src={props.image} alt={props.title} />
+    <Link className="displaybook" to="/book"><img className="book-image"  src={props.image} alt={props.title} /></Link>
     </div>
     <div className="book-info">
         <button></button>
@@ -38,9 +62,11 @@ const DisplayBook = (props) => {
         <button onClick={addToKoszyk} className="addtobuy">Do koszyka</button>
         
         
+        
     </div>
 </div>
- </Link>
+
+ 
 
       
    

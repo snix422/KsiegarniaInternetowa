@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+
 import data from "../../data";
 import NavBar from "./NavBar";
 import DisplayBook from "./DisplayBook";
 import Footer from "./Footer";
+import "../../css/Bestsellers.css"
 
 const Bestsellers = () => {
 

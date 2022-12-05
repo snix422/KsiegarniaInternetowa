@@ -1,16 +1,14 @@
 import searchImg from "../../images/search.png";
 import profileImg from "../../images/profile.png";
-import koszykImg from "../../images/koszyk.png";
 import koszyk2Img from "../../images/koszyk2.png";
 import userImg from "../../images/user.png";
 import logoutImg from "../../images/log-out.png";
 import settingsImg from "../../images/settings.png";
-import logoImg from "../../images/logo.jpg";
 import logoImg2 from "../../images/logo2.png";
-import upArrowImg from "../../images/uparrow.png";
-import downArrowImg from '../../images/downarrow.png';
 import { useState } from "react";
 import {Link} from 'react-router-dom';
+import"../../css/NovBar.css";
+import"../../css/Profile.css";
 
 const NavBarProfile = () => {
     

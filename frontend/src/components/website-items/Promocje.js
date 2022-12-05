@@ -2,6 +2,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import data from "../../data";
 import DisplayBook from "./DisplayBook";
+import "../../css/Recomends.css"
 
 const Promocje = () => {
 

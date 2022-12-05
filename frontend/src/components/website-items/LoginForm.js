@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import "../../css/LoginForm.css"
+
 function LoginForm( {Login,  error} ){
 
 const [details,setDetails]=useState({email:"", password:"", isAdmin: false});

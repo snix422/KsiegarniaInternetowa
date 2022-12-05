@@ -1,7 +1,8 @@
 import React from "react";
 
 const KoszykContext = React.createContext({
-    item: []
+    item: [],
+    sum:0
 });
 
 export default KoszykContext
